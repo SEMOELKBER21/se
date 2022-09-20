@@ -17779,7 +17779,7 @@ if Redis:get(Saidi.."Lock:tagservr"..data.message.chat_id) then
 LuaTele.deleteMessages(data.message.chat_id,{[1]= data.message.id})
 end
 end 
-if tonumber(data.message.sender_id.user_id) == tonumber(Saidi) then
+if tonumber== (data.message.sender_id.user_id) == tonumber(Saidi) then
 return false
 end
 if data.message.content.luatele == "messageChatJoinByLink" and Redis:get(Saidi..'Status:joinet'..data.message.chat_id) == 'true' then
