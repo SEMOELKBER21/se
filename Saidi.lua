@@ -18826,13 +18826,13 @@ Redis:del(Saidi.."SilentGroup:Group"..ChatId)
 LuaTele.editMessageText(ChatId,Msg_id,"* ✧ تم مسح المكتومين *", 'md', false)
 end
 end
+
 end
 end
 
 
 luatele.run(CallBackLua)
  
-
 
 
 
