@@ -1608,7 +1608,7 @@ Redis:srem(semo.."Admin:Group"..msg.chat_id,msg.sender_id.user_id)
 Redis:srem(semo.."Special:Group"..msg.chat_id,msg.sender_id.user_id)
 if Json_Info.ok == false and Json_Info.error_code == 400 and Json_Info.description == "Bad Request: CHAT_ADMIN_REQUIRED" then
 if #monsha ~= 0 then 
-local ListMembers = '\n*✠┊تاك للمالكين  \n ┉┉┉┉┉┉┉┉┉┉*\n'
+local ListMembers = '\n*✠┊تاك للمالكين  \n ⋆*\n'
 for k, v in pairs(monsha) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -1626,7 +1626,7 @@ end
 end
 if Json_Info.ok == false and Json_Info.error_code == 400 and Json_Info.description == "Bad Request: can't remove chat owner" then
 if #monsha ~= 0 then 
-local ListMembers = '\n*✠┊تاك للمالكين  \n ┉┉┉┉┉┉┉┉┉┉*\n'
+local ListMembers = '\n*✠┊تاك للمالكين  \n ⋆*\n'
 for k, v in pairs(monsha) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -1643,7 +1643,7 @@ end
 end
 if Json_Info.ok == true and Json_Info.result == true then
 if #monsha ~= 0 then 
-local ListMembers = '\n*✠┊تاك للمالكين  \n ┉┉┉┉┉┉┉┉┉┉*\n'
+local ListMembers = '\n*✠┊تاك للمالكين  \n ⋆*\n'
 for k, v in pairs(monsha) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -1688,7 +1688,7 @@ Redis:srem(semo.."Admin:Group"..msg.chat_id,msg.sender_id.user_id)
 Redis:srem(semo.."Special:Group"..msg.chat_id,msg.sender_id.user_id)
 if Json_Info.ok == false and Json_Info.error_code == 400 and Json_Info.description == "Bad Request: CHAT_ADMIN_REQUIRED" then
 if #monsha ~= 0 then 
-local ListMembers = '\n*✠┊تاك للمالكين  \n ┉┉┉┉┉┉┉┉┉┉*\n'
+local ListMembers = '\n*✠┊تاك للمالكين  \n ⋆*\n'
 for k, v in pairs(monsha) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -1704,7 +1704,7 @@ end
 end
 if Json_Info.ok == false and Json_Info.error_code == 400 and Json_Info.description == "Bad Request: can't remove chat owner" then
 if #monsha ~= 0 then 
-local ListMembers = '\n*✠┊تاك للمالكين  \n ┉┉┉┉┉┉┉┉┉┉*\n'
+local ListMembers = '\n*✠┊تاك للمالكين  \n ⋆*\n'
 for k, v in pairs(monsha) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -1720,7 +1720,7 @@ end
 end
 if Json_Info.ok == true and Json_Info.result == true then
 if #monsha ~= 0 then 
-local ListMembers = '\n*✠┊تاك للمالكين  \n ┉┉┉┉┉┉┉┉┉┉*\n'
+local ListMembers = '\n*✠┊تاك للمالكين  \n ⋆*\n'
 for k, v in pairs(monsha) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -2666,7 +2666,7 @@ send(msg_chat_id,msg_id,[[
 ︙فيديو︙بصمه الفيديو︙بصمه︙صوت︙رساله ❩
 ↯︙يمكنك اضافة الى النص︙
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
  `#username` ↬ معرف المستخدم
  `#msgs` ↬ عدد الرسائل
  `#name` ↬ اسم المستخدم
@@ -2854,7 +2854,7 @@ send(msg_chat_id,msg_id,[[
 ︙فيديو︙بصمه الفيديو︙بصمه︙صوت︙رساله ❩
 ↯︙يمكنك اضافة الى النص︙
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
  `#username` ↬ معرف المستخدم
  `#msgs` ↬ عدد الرسائل
  `#name` ↬ اسم المستخدم
@@ -3662,8 +3662,7 @@ local list = Redis:smembers(semo.."All:List:Filter")
 if #list == 0 then  
 return send(msg_chat_id,msg_id,"*✠┊لا يوجد كلمات ممنوعه هنا *","md",true)   
 end  
-Filter = '\n*✠┊قائمه المنع \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+Filter = '\n*✠┊قائمه المنع \n ⋆*\n'
 for k,v in pairs(list) do  
 print(v)
 if v:match('photo:(.*)') then
@@ -4446,7 +4445,7 @@ local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = Redis:get(
 return send(msg.chat_id,msg.id,'*\n✠┊ عليك الاشتراك في قناة البوت لأستخدام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 send(msg_chat_id,msg_id,'*✠┊عدد احصائيات البوت الكامله \n
-┉┉┉┉┉┉┉┉┉┉\n✠┊ عدد المجموعات : '..(Redis:scard(semo..'ChekBotAdd') or 0)..'\n✠┊ عدد المشتركين : '..(Redis:scard(semo..'Num:User:Pv') or 0)..'*',"md",true)  
+⋆\n✠┊ عدد المجموعات : '..(Redis:scard(semo..'ChekBotAdd') or 0)..'\n✠┊ عدد المشتركين : '..(Redis:scard(semo..'Num:User:Pv') or 0)..'*',"md",true)  
 end
 if text == 'تفعيل' and msg.Dev then
 if msg.can_be_deleted_for_all_users == false then
@@ -6648,8 +6647,7 @@ local Info_Members = Redis:smembers(semo.."KtmAll:Groups")
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id," ✠┊لا يوجد مكتومين عام حاليا , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه المكتومين عام  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+ListMembers = '\n*✠┊قائمه المكتومين عام  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -6869,8 +6867,7 @@ local Info_Members = Redis:smembers(semo.."ControlAll:Groups")
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id," ✠┊لا يوجد مطورين اساسيين حاليا , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه المطورين الاساسيين  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+ListMembers = '\n*✠┊قائمه المطورين الاساسيين  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -7208,7 +7205,7 @@ if GetMemberStatus.can_promote_members then
 promote = '❬ ✔️ ❭' else promote = '❬ ❌ ❭'
 end
 local PermissionsUserr = '*\n✠┊ صلاحيات المستخدم :\n
-┉┉┉┉┉┉┉┉┉┉'..'\n✠┊ تغيير المعلومات : '..change_info..'\n✠┊ تثبيت الرسائل : '..pin_messages..'\n✠┊ اضافه مستخدمين : '..invite_users..'\n✠┊ مسح الرسائل : '..delete_messages..'\n✠┊ حظر المستخدمين : '..restrict_members..'\n✠┊ اضافه المشرفين : '..promote..'\n\n*'
+⋆'..'\n✠┊ تغيير المعلومات : '..change_info..'\n✠┊ تثبيت الرسائل : '..pin_messages..'\n✠┊ اضافه مستخدمين : '..invite_users..'\n✠┊ مسح الرسائل : '..delete_messages..'\n✠┊ حظر المستخدمين : '..restrict_members..'\n✠┊ اضافه المشرفين : '..promote..'\n\n*'
 return send(msg_chat_id,msg_id,"✠┊الصلاحيات : مشرف الكروب"..(PermissionsUserr or '') ,"md",true) 
 end
 end
@@ -7251,7 +7248,7 @@ if GetMemberStatus.can_promote_members then
 promote = '❬ ✔️ ❭' else promote = '❬ ❌ ❭'
 end
 local PermissionsUserr = '*\n✠┊ صلاحيات المستخدم :\n
-┉┉┉┉┉┉┉┉┉┉'..'\n✠┊ تغيير المعلومات : '..change_info..'\n✠┊ تثبيت الرسائل : '..pin_messages..'\n✠┊ اضافه مستخدمين : '..invite_users..'\n✠┊ مسح الرسائل : '..delete_messages..'\n✠┊ حظر المستخدمين : '..restrict_members..'\n✠┊ اضافه المشرفين : '..promote..'\n\n*'
+⋆'..'\n✠┊ تغيير المعلومات : '..change_info..'\n✠┊ تثبيت الرسائل : '..pin_messages..'\n✠┊ اضافه مستخدمين : '..invite_users..'\n✠┊ مسح الرسائل : '..delete_messages..'\n✠┊ حظر المستخدمين : '..restrict_members..'\n✠┊ اضافه المشرفين : '..promote..'\n\n*'
 return send(msg_chat_id,msg_id,"✠┊الصلاحيات : مشرف الكروب"..(PermissionsUserr or '') ,"md",true) 
 end
 end
@@ -7305,8 +7302,7 @@ end
 if GetMemberStatus.can_promote_members then
 promote = '❬ ✔️ ❭' else promote = '❬ ❌ ❭'
 end
-local PermissionsUserr = '*\n✠┊ صلاحيات المستخدم :\n
-┉┉┉┉┉┉┉┉┉┉'..'\n✠┊ تغيير المعلومات : '..change_info..'\n✠┊ تثبيت الرسائل : '..pin_messages..'\n✠┊ اضافه مستخدمين : '..invite_users..'\n✠┊ مسح الرسائل : '..delete_messages..'\n✠┊ حظر المستخدمين : '..restrict_members..'\n✠┊ اضافه المشرفين : '..promote..'\n\n*'
+local PermissionsUserr = '*\n✠┊ صلاحيات المستخدم :\n⋆'..'\n✠┊ تغيير المعلومات : '..change_info..'\n✠┊ تثبيت الرسائل : '..pin_messages..'\n✠┊ اضافه مستخدمين : '..invite_users..'\n✠┊ مسح الرسائل : '..delete_messages..'\n✠┊ حظر المستخدمين : '..restrict_members..'\n✠┊ اضافه المشرفين : '..promote..'\n\n*'
 return send(msg_chat_id,msg_id,"✠┊الصلاحيات : مشرف الكروب"..(PermissionsUserr or '') ,"md",true) 
 end
 end
@@ -8195,8 +8191,7 @@ end
 if GetMemberStatus.can_promote_members then
 promote = '❬ ✔️ ❭' else promote = '❬ ❌ ❭'
 end
-PermissionsUser = '*\n✠┊ صلاحيات المستخدم :\n
-┉┉┉┉┉┉┉┉┉┉'..'\n✠┊ تغيير المعلومات : '..change_info..'\n✠┊ تثبيت الرسائل : '..pin_messages..'\n✠┊ اضافه مستخدمين : '..invite_users..'\n✠┊ مسح الرسائل : '..delete_messages..'\n✠┊ حظر المستخدمين : '..restrict_members..'\n✠┊ اضافه المشرفين : '..promote..'\n\n*'
+PermissionsUser = '*\n✠┊ صلاحيات المستخدم :\n⋆'..'\n✠┊ تغيير المعلومات : '..change_info..'\n✠┊ تثبيت الرسائل : '..pin_messages..'\n✠┊ اضافه مستخدمين : '..invite_users..'\n✠┊ مسح الرسائل : '..delete_messages..'\n✠┊ حظر المستخدمين : '..restrict_members..'\n✠┊ اضافه المشرفين : '..promote..'\n\n*'
 end
 return send(msg_chat_id,msg_id,
 '\n*✠┊ايديك : '..UserId..
@@ -8263,8 +8258,7 @@ end
 if GetMemberStatus.can_promote_members then
 promote = '❬ ✔️ ❭' else promote = '❬ ❌ ❭'
 end
-PermissionsUser = '*\n✠┊ صلاحيات البوت : مشرف في الكروب :\n
-┉┉┉┉┉┉┉┉┉┉'..'\n✠┊ تغيير المعلومات : '..change_info..'\n✠┊ تثبيت الرسائل : '..pin_messages..'\n✠┊ اضافه مستخدمين : '..invite_users..'\n✠┊ مسح الرسائل : '..delete_messages..'\n✠┊ حظر المستخدمين : '..restrict_members..'\n✠┊ اضافه المشرفين : '..promote..'\n\n*'
+PermissionsUser = '*\n✠┊ صلاحيات البوت : مشرف في الكروب :\n⋆'..'\n✠┊ تغيير المعلومات : '..change_info..'\n✠┊ تثبيت الرسائل : '..pin_messages..'\n✠┊ اضافه مستخدمين : '..invite_users..'\n✠┊ مسح الرسائل : '..delete_messages..'\n✠┊ حظر المستخدمين : '..restrict_members..'\n✠┊ اضافه المشرفين : '..promote..'\n\n*'
 return send(msg_chat_id,msg_id,PermissionsUser,"md",true) 
 end
 
@@ -9938,8 +9932,7 @@ end
 
 local Info_Members = Redis:smembers(semo.."Ownerss:Group"..msg_chat_id) 
 if #Info_Members ~= 0 then
-local ListMembers = '\n*✠┊قائمه المالكين \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+local ListMembers = '\n*✠┊قائمه المالكين \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -9952,8 +9945,7 @@ send(msg_chat_id, msg_id, ListMembers, 'md')
 end
 local Info_Members = Redis:smembers(semo.."SuperCreator:Group"..msg_chat_id) 
 if #Info_Members ~= 0 then
-local ListMembers = '\n*✠┊قائمه المنشئين الاساسيين \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+local ListMembers = '\n*✠┊قائمه المنشئين الاساسيين \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -9966,8 +9958,7 @@ send(msg_chat_id, msg_id, ListMembers, 'md')
 end
 local Info_Members = Redis:smembers(semo.."Creator:Group"..msg_chat_id) 
 if #Info_Members ~= 0 then
-local ListMembers = '\n*✠┊قائمه المنشئين  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+local ListMembers = '\n*✠┊قائمه المنشئين  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -9980,8 +9971,7 @@ send(msg_chat_id, msg_id, ListMembers, 'md')
 end
 local Info_Members = Redis:smembers(semo.."Manger:Group"..msg_chat_id) 
 if #Info_Members ~= 0 then
-local ListMembers = '\n*✠┊قائمه المدراء  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+local ListMembers = '\n*✠┊قائمه المدراء  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -9994,8 +9984,7 @@ send(msg_chat_id, msg_id, ListMembers, 'md')
 end
 local Info_Members = Redis:smembers(semo.."Admin:Group"..msg_chat_id) 
 if #Info_Members ~= 0 then
-local ListMembers = '\n*✠┊قائمه الادمنيه  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+local ListMembers = '\n*✠┊قائمه الادمنيه  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -10008,8 +9997,7 @@ send(msg_chat_id, msg_id, ListMembers, 'md')
 end
 local Info_Members = Redis:smembers(semo.."Special:Group"..msg_chat_id) 
 if #Info_Members ~= 0 then
-local ListMembers = '\n*✠┊قائمه المميزين  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+local ListMembers = '\n*✠┊قائمه المميزين  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -10022,8 +10010,7 @@ send(msg_chat_id, msg_id, ListMembers, 'md')
 end
 local Info_Members = bot.searchChatMembers(msg_chat_id, "*", 200)
 local List_Members = Info_Members.members
-listall = '\n*✠┊قائمه الاعضاء \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+listall = '\n*✠┊قائمه الاعضاء \n ⋆*\n'
 for k, v in pairs(List_Members) do
 local UserInfo = bot.getUser(v.member_id.user_id)
 if UserInfo.username ~= "" then
@@ -10051,8 +10038,7 @@ local Info_Members = Redis:smembers(semo.."Devss:Groups")
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد مطورين حاليا , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه مطورين الثانويين \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+ListMembers = '\n*✠┊قائمه مطورين الثانويين \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -10082,8 +10068,7 @@ local Info_Members = Redis:smembers(semo.."Dev:Groups")
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد مطورين حاليا , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه مطورين البوت \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+ListMembers = '\n*✠┊قائمه مطورين البوت \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -10121,8 +10106,7 @@ local Info_Members = Redis:smembers(semo.."Ownerss:Group"..msg_chat_id)
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد منشئين اساسيين حاليا , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه المالكين \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+ListMembers = '\n*✠┊قائمه المالكين \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -10152,8 +10136,7 @@ local Info_Members = Redis:smembers(semo.."SuperCreator:Group"..msg_chat_id)
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد منشئين اساسيين حاليا , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه المنشئين الاساسيين \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+ListMembers = '\n*✠┊قائمه المنشئين الاساسيين \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -10183,8 +10166,7 @@ local Info_Members = Redis:smembers(semo.."Creator:Group"..msg_chat_id)
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد منشئين حاليا , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه المنشئين  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+ListMembers = '\n*✠┊قائمه المنشئين  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -10214,8 +10196,7 @@ local Info_Members = Redis:smembers(semo.."Manger:Group"..msg_chat_id)
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد مدراء حاليا , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه المدراء  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+ListMembers = '\n*✠┊قائمه المدراء  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -10245,8 +10226,7 @@ local Info_Members = Redis:smembers(semo.."Admin:Group"..msg_chat_id)
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد ادمنيه حاليا , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه الادمنيه  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+ListMembers = '\n*✠┊قائمه الادمنيه  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -10276,8 +10256,7 @@ local Info_Members = Redis:smembers(semo.."Special:Group"..msg_chat_id)
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد مميزين حاليا , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه المميزين  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+ListMembers = '\n*✠┊قائمه المميزين  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -10301,8 +10280,7 @@ local Info_Members = Redis:smembers(semo.."kholat:Group"..msg_chat_id)
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد مطايه , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه المطايه  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+ListMembers = '\n*✠┊قائمه المطايه  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -10326,8 +10304,7 @@ local Info_Members = Redis:smembers(semo.."wtka:Group"..msg_chat_id)
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد تاج , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه التاج  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+ListMembers = '\n*✠┊قائمه التاج  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -10351,8 +10328,7 @@ local Info_Members = Redis:smembers(semo.."twhd:Group"..msg_chat_id)
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد ملوك حاليا , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه الملوك  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+ListMembers = '\n*✠┊قائمه الملوك  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -10376,8 +10352,7 @@ local Info_Members = Redis:smembers(semo.."klb:Group"..msg_chat_id)
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد جلاب حاليا , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه الجلاب  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+ListMembers = '\n*✠┊قائمه الجلاب  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -10401,8 +10376,7 @@ local Info_Members = Redis:smembers(semo.."mar:Group"..msg_chat_id)
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد طامسين حاليا , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه الطامسين  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+ListMembers = '\n*✠┊قائمه الطامسين  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -10426,8 +10400,7 @@ local Info_Members = Redis:smembers(semo.."3ra:Group"..msg_chat_id)
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد زواحف حاليا , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه الزواحف  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+ListMembers = '\n*✠┊قائمه الزواحف  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -10451,8 +10424,7 @@ local Info_Members = Redis:smembers(semo.."smb:Group"..msg_chat_id)
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد لوكيه حاليا , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه اللوكيه  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+ListMembers = '\n*✠┊قائمه اللوكيه  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -10476,8 +10448,7 @@ local Info_Members = Redis:smembers(semo.."2rd:Group"..msg_chat_id)
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد ثولان حاليا , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه الثولان  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+ListMembers = '\n*✠┊قائمه الثولان  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -10501,8 +10472,7 @@ local Info_Members = Redis:smembers(semo.."8by:Group"..msg_chat_id)
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد اغبياء حاليا , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه الاغبيه  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+ListMembers = '\n*✠┊قائمه الاغبيه  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -10532,8 +10502,7 @@ local Info_Members = Redis:smembers(semo.."BanAll:Groups")
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد محظورين عام حاليا , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه المحظورين عام  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+ListMembers = '\n*✠┊قائمه المحظورين عام  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -10563,8 +10532,7 @@ local Info_Members = Redis:smembers(semo.."BanGroup:Group"..msg_chat_id)
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد محظورين حاليا , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه المحظورين  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+ListMembers = '\n*✠┊قائمه المحظورين  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -10594,8 +10562,7 @@ local Info_Members = Redis:smembers(semo.."SilentGroup:Group"..msg_chat_id)
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد مكتومين حاليا , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه المكتومين  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+ListMembers = '\n*✠┊قائمه المكتومين  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -12149,8 +12116,7 @@ if msg.can_be_deleted_for_all_users == false then
 return send(msg_chat_id,msg_id,"\n*✠┊عذرآ البوت ليس ادمن في الكروب يرجى ترقيته وتفعيل الصلاحيات له *","md",true)  
 end
 local Info_Members = bot.getSupergroupMembers(msg_chat_id, "Administrators", "*", 0, 200)
-listAdmin = '\n*✠┊قائمه المشرفين \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+listAdmin = '\n*✠┊قائمه المشرفين \n ⋆*\n'
 local List_Members = Info_Members.members
 for k, v in pairs(List_Members) do
 if Info_Members.members[k].status.Merotele == "chatMemberStatusCreator" then
@@ -12258,8 +12224,7 @@ return send(msg_chat_id,msg_id,"\n*✠┊عذرآ البوت ليس ادمن ف�
 end
 local Info_Members = bot.getSupergroupMembers(msg_chat_id, "Bots", "*", 0, 200)
 local List_Members = Info_Members.members
-listBots = '\n*✠┊قائمه البوتات \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+listBots = '\n*✠┊قائمه البوتات \n ⋆*\n'
 x = 0
 for k, v in pairs(List_Members) do
 local UserInfo = bot.getUser(v.member_id.user_id)
@@ -12271,8 +12236,7 @@ Admin = ""
 end
 listBots = listBots.."*"..k.." - @"..UserInfo.username.."* "..Admin.."\n"
 end
-send(msg_chat_id,msg_id,listBots.."*\n
-┉┉┉┉┉┉┉┉┉┉\n✠┊ عدد البوتات التي هي ادمن ( "..x.." )*","md",true)  
+send(msg_chat_id,msg_id,listBots.."*\n⋆\n✠┊ عدد البوتات التي هي ادمن ( "..x.." )*","md",true)  
 end
 
 
@@ -12296,8 +12260,7 @@ local Info_Members = bot.getSupergroupMembers(msg_chat_id, "Recent", "*", 0, 200
 local List_Members = Info_Members.members
 x = 0
 local y = false
-restricted = '\n*✠┊قائمه المقيديين \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+restricted = '\n*✠┊قائمه المقيديين \n ⋆*\n'
 for k, v in pairs(List_Members) do
 if Info_Members.members[k].status.is_member == true and Info_Members.members[k].status.Merotele == "chatMemberStatusRestricted" then
 y = true
@@ -12380,8 +12343,7 @@ return send(msg.chat_id,msg.id,'*\n✠┊ عليك الاشتراك في قنا�
 end
 local Info_Members = bot.searchChatMembers(msg_chat_id, "*", 200)
 local List_Members = Info_Members.members
-listall = '\n*✠┊قائمه الاعضاء \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+listall = '\n*✠┊قائمه الاعضاء \n ⋆*\n'
 for k, v in pairs(List_Members) do
 local UserInfo = bot.getUser(v.member_id.user_id)
 if UserInfo.username ~= "" then
@@ -15185,8 +15147,7 @@ local list = Redis:smembers(semo.."List:Filter"..msg_chat_id)
 if #list == 0 then  
 return send(msg_chat_id,msg_id,"*✠┊لا يوجد كلمات ممنوعه هنا *","md",true)   
 end  
-Filter = '\n*✠┊قائمه المنع \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+Filter = '\n*✠┊قائمه المنع \n ⋆*\n'
 for k,v in pairs(list) do  
 print(v)
 if v:match('photo:(.*)') then
@@ -15316,8 +15277,7 @@ local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = Redis:get(
 return send(msg.chat_id,msg.id,'*\n✠┊ عليك الاشتراك في قناة البوت لأستخدام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local list = Redis:smembers(semo.."Command:List:Group"..msg_chat_id.."")
-Command = "✠┊قائمه الاوامر المضافه  \n
-┉┉┉┉┉┉┉┉┉┉\n"
+Command = "✠┊قائمه الاوامر المضافه  \n⋆\n"
 for k,v in pairs(list) do
 Commands = Redis:get(semo.."Get:Reides:Commands:Group"..msg_chat_id..":"..v)
 if Commands then 
@@ -15525,8 +15485,7 @@ end
 if Redis:get(semo.."Status:AddMe"..msg.chat_id) then
 StatusAddme = '❬ ✔️ ❭' else StatusAddme = '❬ ❌ ❭'
 end
-local protectionGroup = '\n*✠┊اعدادات حمايه الكروب\n 
-┉┉┉┉┉┉┉┉┉┉\n'
+local protectionGroup = '\n*✠┊اعدادات حمايه الكروب\n ⋆\n'
 ..'\n✠┊ جلب الرابط ➤ '..Statuslink
 ..'\n✠┊ جلب الترحيب ➤ '..StatusWelcome
 ..'\n✠┊ الايدي ➤ '..StatusId
@@ -15664,11 +15623,7 @@ end
 if Get_Chat.permissions.can_send_polls then
 polls = '❬ ✔️ ❭' else polls = '❬ ❌ ❭'
 end
-local permissions = '*\n✠┊ صلاحيات الكروب :\n
-┉┉┉┉┉┉┉┉┉┉'..'\n✠┊ ارسال الويب : '..web..'\n✠┊ تغيير معلومات الكروب : '..info..'\n✠┊ اضافه مستخدمين : '..invite..'\n✠┊ تثبيت الرسائل : '..pin..'\n✠┊ ارسال الميديا : '..media..'\n✠┊ ارسال الرسائل : '..messges..'\n✠┊ اضافه البوتات : '..other..'\n✠┊ ارسال استفتاء : '..polls..'*\n\n'
-local TextChat = '*\n✠┊ معلومات الكروب :\n
-┉┉┉┉┉┉┉┉┉┉'..' \n✠┊ اسم الكروب : ❬* ['..Get_Chat.title..']('..Info_Chats.invite_link.invite_link..')* ❭\n✠┊ عدد الادمنيه : ❬ '..Info_Chats.administrator_count..' ❭\n✠┊ عدد المحظورين : ❬ '..Info_Chats.banned_count..' ❭\n✠┊ عدد الاعضاء : ❬ '..Info_Chats.member_count..' ❭\n✠┊ عدد المقيديين : ❬ '..Info_Chats.restricted_count..' ❭\n✠┊ الايدي : ❬ *`'..msg.chat_id..'`* ❭*\n'
-if Info_Chats.photo then
+local permissions = '*\n✠┊ صلاحيات الكروب :\n⋆'..'\n✠┊ ارسال الويب : '..web..'\n✠┊ تغيير معلومات الكروب : '..info..'\n✠┊ اضافه مستخدمين : '..invite..'\n✠┊ تثبيت الرسائل : '..pin..'\n✠┊ ارسال الميديا : '..media..'\n✠┊ ارسال الرسائل : '..messges..'\n✠┊ اضافه البوتات : '..other..'\n✠┊ ارسال استفتاء : '..polls..'*\n\n'local TextChat = '*\n✠┊ معلومات الكروب :\n⋆'..' \n✠┊ اسم الكروب : ❬* ['..Get_Chat.title..']('..Info_Chats.invite_link.invite_link..')* ❭\n✠┊ عدد الادمنيه : ❬ '..Info_Chats.administrator_count..' ❭\n✠┊ عدد المحظورين : ❬ '..Info_Chats.banned_count..' ❭\n✠┊ عدد الاعضاء : ❬ '..Info_Chats.member_count..' ❭\n✠┊ عدد المقيديين : ❬ '..Info_Chats.restricted_count..' ❭\n✠┊ الايدي : ❬ *`'..msg.chat_id..'`* ❭*\n'if Info_Chats.photo then
 bot.sendPhoto(msg.chat_id, msg.id, Info_Chats.photo.sizes[1].photo.remote.id,TextChat..permissions, "md")
 else
 return send(msg_chat_id,msg_id, TextChat..permissions,"md",true)
@@ -17136,8 +17091,7 @@ if text == ("الردود") then
   return send(msg.chat_id,msg.id,'*\n✠┊عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   local list = Redis:smembers(semo.."List:Manager"..msg_chat_id.."")
-  rd_list = "✠┊قائمه الردود \n
-┉┉┉┉┉┉┉┉┉┉\n"
+  rd_list = "✠┊قائمه الردود \n⋆\n"
   for k,v in pairs(list) do
   if Redis:get(semo.."Add:Rd:Manager:Gif"..v..msg_chat_id) then
   db = "متحركه "
@@ -17162,8 +17116,7 @@ if text == ("الردود") then
   end
   local list_mz = Redis:smembers(semo.."List:Rd:mz"..msg_chat_id.."")
   if #list_mz ~= 0 then 
-  mz_text = "
-┉┉┉┉┉┉┉┉┉┉\nالردود علي كلمه من جمله :\n"
+  mz_text = "⋆\nالردود علي كلمه من جمله :\n"
   for k,v in pairs(list_mz) do
   if Redis:get(semo.."Add:Rd:mz:Gif"..v..msg_chat_id) then
   db = "متحركه "
@@ -17230,7 +17183,7 @@ if text and text:match("^(.*)$") then
    ، فيديو ، بصمه الفيديو ، بصمه ، صوت ، رساله ❩
   ↯︙يمكنك اضافة الى النص 
   
-┉┉┉┉┉┉┉┉┉┉
+⋆
    `#username` ↬ معرف المستخدم
    `#msgs` ↬ عدد الرسائل
    `#name` ↬ اسم المستخدم
@@ -17347,8 +17300,7 @@ local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = Redis:get(
 return send(msg.chat_id,msg.id,'*\n✠┊ عليك الاشتراك في قناة البوت لأستخدام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local list = Redis:smembers(semo.."List:Rd:Sudo")
-text = "\n📝︙قائمة الردود العامه \n
-┉┉┉┉┉┉┉┉┉┉\n"
+text = "\n📝︙قائمة الردود العامه \n⋆\n"
 for k,v in pairs(list) do
 if Redis:get(semo.."Add:Rd:Sudo:Gif"..v) then
 db = "متحركه 🎭"
@@ -17440,7 +17392,7 @@ send(msg_chat_id,msg_id,[[
 ❨ ملف ✠┊ملصق ✠┊متحركه ✠┊صوره
  ✠┊فيديو ✠┊بصمه الفيديو ✠┊بصمه ✠┊صوت ✠┊رساله ❩
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ↯︙للخروج ارسل ( الغاء )
  ✓
 ]],"md",true)  
@@ -17521,13 +17473,13 @@ if text == "حذف قسم" then
   ※︙ارسل الان كليشه القسم
   ※︙نص فقط
   
-┉┉┉┉┉┉┉┉┉┉
+⋆
   `#username` ↬ معرف المستخدم
   `#name` ↬ اسم المستخدم
   `#id` ↬ ايدي المستخدم
   `#stast` ↬ رتبة المستخدم
   
-┉┉┉┉┉┉┉┉┉┉
+⋆
   تم صنع الكود بواسطه انوبيس
   ]],"md",true)  
   return false
@@ -17607,8 +17559,7 @@ if text == "حذف قسم" then
   return send(msg.chat_id,msg.id,'*\n✠┊عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   local list = Redis:smembers(semo.."List:Sections:inline")
-  text = "✠┊قائمه الاقسام \n
-┉┉┉┉┉┉┉┉┉┉\n"
+  text = "✠┊قائمه الاقسام \n⋆\n"
   for k,v in pairs(list) do
   text = text..""..k.." » "..v.."\n"
   end
@@ -17897,8 +17848,7 @@ if text == ("الرتب المضافه") then
   end
 local rtb_list = Redis:smembers(semo.."rowtab:")
 if #rtb_list == 0 then return send(msg_chat_id,msg_id,'✠┊لايوجد رتب مضافه ف البوت',"md",true)  end
-rtb = "الرتب المضافه في البوت \n
-┉┉┉┉┉┉┉┉┉┉\n"
+rtb = "الرتب المضافه في البوت \n⋆\n"
 for k,v in pairs(rtb_list) do
 rtba_type = Redis:get(semo..v.."type:")
 if rtba_type == "sdev" then rtba_t = "مطور ثانوي"
@@ -18223,7 +18173,7 @@ send(msg_chat_id,msg_id,[[
 ❨ ملف︙ملصق︙متحركه︙صوره
 ︙فيديو︙بصمه الفيديو︙بصمه︙صوت︙رساله ❩
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ↯︙للخروج ارسل ( الغاء )
  ✓
 ]],"md",true)  
@@ -18248,7 +18198,7 @@ send(msg_chat_id,msg_id,[[
 ❨ ملف︙ملصق︙متحركه︙صوره
 ︙فيديو︙بصمه الفيديو︙بصمه︙صوت︙رساله ❩
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ↯︙للخروج ارسل ( الغاء )
  ✓
 ]],"md",true)  
@@ -18332,8 +18282,7 @@ SilentGroup = 'مكتوم'
 else
 SilentGroup = 'غير مكتوم'
 end
-send(msg_chat_id,msg_id,"\n*✠┊معلومات الكشف \n
-┉┉┉┉┉┉┉┉┉┉"..'\n✠┊ الحظر العام : '..BanAll..'\n✠┊ الحظر : '..BanGroup..'\n✠┊ الكتم : '..SilentGroup..'\n✠┊ التقييد : '..Restricted..'*',"md",true)  
+send(msg_chat_id,msg_id,"\n*✠┊معلومات الكشف \n⋆"..'\n✠┊ الحظر العام : '..BanAll..'\n✠┊ الحظر : '..BanGroup..'\n✠┊ الكتم : '..SilentGroup..'\n✠┊ التقييد : '..Restricted..'*',"md",true)  
 end
 if text and text:match('^كشف القيود @(%S+)$') then
 local UserName = text:match('^كشف القيود @(%S+)$')
@@ -18382,8 +18331,7 @@ SilentGroup = 'مكتوم'
 else
 SilentGroup = 'غير مكتوم'
 end
-send(msg_chat_id,msg_id,"\n*✠┊معلومات الكشف \n
-┉┉┉┉┉┉┉┉┉┉"..'\n✠┊ الحظر العام : '..BanAll..'\n✠┊ الحظر : '..BanGroup..'\n✠┊ الكتم : '..SilentGroup..'\n✠┊ التقييد : '..Restricted..'*',"md",true)  
+send(msg_chat_id,msg_id,"\n*✠┊معلومات الكشف \n⋆"..'\n✠┊ الحظر العام : '..BanAll..'\n✠┊ الحظر : '..BanGroup..'\n✠┊ الكتم : '..SilentGroup..'\n✠┊ التقييد : '..Restricted..'*',"md",true)  
 end
 if text == 'رفع القيود' and msg.reply_to_message_id ~= 0 then
 local Message_Reply = bot.getMessage(msg.chat_id, msg.reply_to_message_id)
@@ -18596,8 +18544,7 @@ local zwgat_list = Redis:smembers(semo..msg_chat_id.."zwgat:")
 if #zwgat_list == 0 then 
 return send(msg_chat_id,msg_id,'✠┊لايوجد زوجات',"md",true) 
 end 
-local zwga_list = "✠┊عدد الزوجات : "..#zwgat_list.."\n✠┊ الزوجات :\n
-┉┉┉┉┉┉┉┉┉┉\n"
+local zwga_list = "✠┊عدد الزوجات : "..#zwgat_list.."\n✠┊ الزوجات :\n⋆\n"
 for k, v in pairs(zwgat_list) do
 local UserInfo = bot.getUser(v)
 local zwga_name = UserInfo.first_name
@@ -18641,8 +18588,7 @@ local mutlqat_list = Redis:smembers(semo..msg_chat_id.."mutlqat:")
 if #mutlqat_list == 0 then 
 return send(msg_chat_id,msg_id,'✠┊لايوجد مطلقات',"md",true) 
 end 
-local mutlqa_list = "✠┊عدد المطلقات : "..#mutlqat_list.."\n✠┊ المطلقات :\n
-┉┉┉┉┉┉┉┉┉┉\n"
+local mutlqa_list = "✠┊عدد المطلقات : "..#mutlqat_list.."\n✠┊ المطلقات :\n⋆\n"
 for k, v in pairs(mutlqat_list) do
 local UserInfo = bot.getUser(v)
 local mutlqa_name = UserInfo.first_name
@@ -18696,7 +18642,7 @@ if #heart_list == 0 then
 return send(msg_chat_id,msg_id,"قلبك فاضي محدش فيه","md")
 elseif #heart_list > 0 then
 your_heart = "الناس الي فقلبك \n
-┉┉┉┉┉┉┉┉┉┉\n"
+⋆\n"
 for k,v in pairs(heart_list) do
 local user_info = bot.getUser(v)
 local name = user_info.first_name
@@ -19040,7 +18986,7 @@ send(msg_chat_id,msg_id,[[
  ، فيديو ، بصمه الفيديو ، بصمه ، صوت ، رساله ❩
 ↯︙يمكنك اضافة الى النص ✠┊
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
  `#username` ↬ معرف المستخدم
  `#msgs` ↬ عدد الرسائل
  `#name` ↬ اسم المستخدم
@@ -19230,7 +19176,7 @@ return send(msg.chat_id,msg.id,'*\n✠┊ عليك الاشتراك في قنا�
 end
 local list = Redis:smembers(semo.."List:Manager:inline"..msg_chat_id.."")
 text = "✠┊قائمه الردود الانلاين \n
-┉┉┉┉┉┉┉┉┉┉\n"
+⋆\n"
 for k,v in pairs(list) do
 if Redis:get(semo.."Add:Rd:Manager:Gif:inline"..v..msg_chat_id) then
 db = "متحركه"
@@ -19399,7 +19345,7 @@ send(msg_chat_id,msg_id,[[
  ، فيديو ، بصمه الفيديو ، بصمه ، صوت ، رساله ❩
 ↯︙يمكنك اضافة الى النص ✠┊
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
  `#username` ↬ معرف المستخدم
  `#msgs` ↬ عدد الرسائل
  `#name` ↬ اسم المستخدم
@@ -19528,7 +19474,7 @@ return send(msg.chat_id,msg.id,'*\n✠┊ عليك الاشتراك في قنا�
 end
 local list = Redis:smembers(semo.."List:Manager:inline3am")
 text = "✠┊قائمه الردود الانلاين \n
-┉┉┉┉┉┉┉┉┉┉\n"
+⋆\n"
 for k,v in pairs(list) do
 if Redis:get(semo.."Add:Rd:Manager:Gif:inline3am"..v) then
 db = "متحركه"
@@ -19610,7 +19556,7 @@ send(msg_chat_id,msg_id,[[
  ، فيديو ، بصمه الفيديو ، بصمه ، صوت ، رساله ❩
 ↯︙يمكنك اضافة الى النص ✠┊
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
  `#username` ↬ معرف المستخدم
  `#msgs` ↬ عدد الرسائل
  `#name` ↬ اسم المستخدم
@@ -19799,7 +19745,7 @@ return send(msg.chat_id,msg.id,'*\n✠┊ عليك الاشتراك في قنا�
 end
 local mz_sudo = Redis:smembers(semo.."List:Rd:Sudo:mz")
 mmez_list = "\n✠┊ قائمة الردود المميزه \n
-┉┉┉┉┉┉┉┉┉┉\n"
+⋆\n"
 for k,v in pairs(mz_sudo) do
 if Redis:get(semo.."Add:Rd:Sudo:mz:Gif"..v) then
 db = "متحركه"
@@ -19912,7 +19858,7 @@ data = {
 return send(msg_chat_id,msg_id, [[*
 ✠┊اوامــر البــوت الرئيسيـة 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊{ م1 } ← اوامر الحمايه
 ✠┊{ م2 } ← اوامر الادمنيه
 ✠┊{ م3 } ← اوامر المدراء
@@ -19945,7 +19891,7 @@ data = {
 local TextHelp = [[*
 ✠┊اوامر المطور الاساسي  
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊تفعيل  ←  تعطيل
 ✠┊رفع  تنزيل ← مطور اساسي
 ✠┊المطورين الاساسيين
@@ -19957,7 +19903,7 @@ local TextHelp = [[*
 ✠┊المطورين ← مسح المطورين
 ✠┊تغيير المطور الاساسي
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊تفعيل الوضع المدفوع + الايدي 
 ✠┊الغاء الوضع المدفوع + الايدي
 ✠┊حظر كروب + { الايدي }
@@ -19970,14 +19916,14 @@ local TextHelp = [[*
 ✠┊الاشتراك الاجباري للكروب
 ✠┊تعيين عدد الاعضاء + {العدد}
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊حظر عام ، الغاء العام
 ✠┊قائمه العام ، مسح قائمه العام
 ✠┊كتم عام ، الغاء كتم عام
 ✠┊المكتومين عام
 ✠┊مسح المكتومين عام
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊تغيير ، مسح ←{ اسم البوت }
 ✠┊ضع صوره للترحيب 
 ✠┊الاحصائيات
@@ -19986,7 +19932,7 @@ local TextHelp = [[*
 ✠┊اذاعه بالتوجيه ، اذاعه بالتثبيت
 ✠┊اذاعه خاص بالتوجيه
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊تفعيل تعطيل جلب النسخه التلقائيه
 ✠┊جلب نسخه احتياطيه
 ✠┊رفع النسخه الاحتياطيه بالرد
@@ -19995,7 +19941,7 @@ local TextHelp = [[*
 ✠┊رفع نسخه الردود بالرد
 ✠┊معلومات التنصيب
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊تعيين ، مسح ← { الايدي عام }
 ✠┊اضف ، مسح ← {رد عام}
 ✠┊اضف ، مسح ← {رد عام متعدد}
@@ -20009,7 +19955,7 @@ local TextHelp = [[*
 ✠┊قائمه المنع عام
 ✠┊مسح قائمه المنع عام
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊اضف مسح ← سؤال
 ✠┊الاسئله المضافه
 ✠┊مسح الاسئله المضافه
@@ -20024,21 +19970,21 @@ local TextHelp = [[*
 ✠┊قائمة الموسيقى 
 ✠┊مسح قائمه الموسيقى 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊تفعيل ، تعطيل ← الاوامر التاليه↓
 ✠┊البوت الخدمي ، المغادرة ، الاذاعه
 ✠┊التواصل ، الاحصائيات
 ✠┊ملف ← { اسم الملف }
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊مسح جميع الملفات 
 ✠┊المتجر ، الملفات
 ✠┊تحديث ، تحديث السورس
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊اوامر المطور في البوت
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊رفع، تنزيل ← { مالك }
 ✠┊المالكين ، مسح المالكين
 ✠┊تنزيل جميع الرتب
@@ -20067,7 +20013,7 @@ data = {
 local TextHelp = [[*
 ︙اوامر التسليه كالاتي: 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊الامر ، تفعيل ، تعطيل  ← { الامر }
 ✠┊غنيلي ، ريمكس ، اغنيه ، شعر
 ✠┊صوره ،  متحركه
@@ -20076,7 +20022,7 @@ local TextHelp = [[*
 ✠┊حساب العمر( احسب + تاريخ الميلاد)
 ✠┊معنى اسم + الاسم
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 *]]
 return send(msg_chat_id,msg_id,TextHelp,"md",false, false, false, false, reply_markup)
 elseif text == 'م1' then
@@ -20102,12 +20048,12 @@ data = {
 local TextHelp = [[*
 ✠┊اوامر الحمايه كالاتي ...
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊قفل ، فتح ← الامر 
 ✠┊تستطيع قفل حمايه كما يلي ...
 ✠┊← { بالتقييد ، بالطرد ، بالكتم }
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊الكل ~ الدخول
 ✠┊الروابط ~ المعرف
 ✠┊التاك ~ الشارحه
@@ -20115,13 +20061,13 @@ local TextHelp = [[*
 ✠┊المتحركه ~ الملفات
 ✠┊الصور ~ الفيديو 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊الماركداون ~ البوتات
 ✠┊التكرار ~ الكلايش
 ✠┊السيلفي ~ الملصقات
 ✠┊الانلاين ~  الدردشه
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊التوجيه ~ الاغاني
 ✠┊الصوت ~ الجهات
 ✠┊الاشعارات ~ التثبيت 
@@ -20131,7 +20077,7 @@ local TextHelp = [[*
 ✠┊الإنكليزيه
 ✠┊الكفر ~ الاباحي
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 *]]
 return send(msg_chat_id,msg_id,TextHelp,"md",false, false, false, false, reply_markup)
 elseif text == 'م2' then
@@ -20157,53 +20103,53 @@ data = {
 local TextHelp = [[*
 ✠┊اوامر ادمنية الكروب ...
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊رفع، تنزيل ← مميز
 ✠┊المميزين ← مسح المميزين 
 ✠┊رفع الادمنيه
 ✠┊تاك ، تاك للكل ، الكروب
 ✠┊منع ، الغاء منع
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊الاوامر التالية ← {بالرد ، بالمعرف}
 ✠┊حظر ، طرد ← الغاء حظر 
 ✠┊كتم ← الغاء كتم
 ✠┊تقييد ← الغاء تقييد
 ✠┊كشف ، رفع ← القيود
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊عرض القوائم كما يلي ...
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊المنشئين الاساسيين ، المنشئين 
 ✠┊المدراء ، الادمنيه ، المميزين
 ✠┊المشرفين ، المكتومين
 ✠┊قائمه المنع
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊تثبيت ، الغاء تثبيت
 ✠┊الرابط ، الاعدادات ، الحمايه
 ✠┊الترحيب ، القوانين
 ✠┊ضع رتبه  ← { اسم الرتبه } 
 ✠┊تحكم ← {بالرد ، بالمعرف}
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊تفعيل ، تعطيل ← الاوامر التاليه :
 ✠┊الترحيب ، الرابط 
 ✠┊ردود البوت ، الالعاب
 ✠┊اطردني ، التسليه
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊مسح ← الاوامر التاليه
 ✠┊القوائم ، قائمه المنع ، المميزين
 ✠┊الرابط ، القوانين ، الصوره
 ✠┊مسح ← { عدد }
 ✠┊مسح ← { بالرد }
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊اوامر الاعضاء والادمنيه 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊ايدي ، ايدي بالرد ، رسائلي
 ✠┊تفاعلي ، لقبي ، بايو ، ترند
 ✠┊جهاتي ، تعديلاتي ، نقاطي
@@ -20245,7 +20191,7 @@ data = {
 local TextHelp = [[*
 ✠┊اوامر المدراء في الكروب
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊رفع ، تنزيل ← ادمن
 ✠┊الادمنيه ← مسح الادمنيه
 ✠┊تنزيل الكل ← {بالرد ، بالمعرف}
@@ -20255,28 +20201,28 @@ local TextHelp = [[*
 ✠┊طرد ← المحذوفين 
 ✠┊قفل فتح ← ارسال القناة
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊لتغيير رد الرتب في البوت
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊تغيير رد ← {اسم الرتبه والنص} 
 ✠┊المطور ، المالك ، المنشئ الاساسي
 ✠┊المنشئ ، المدير ، الادمن
 ✠┊المميز ، العضو
 ✠┊مسح رد ← { اسم الرتبه }
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊وضع الرتب ← { بالرد ، بالمعرف}
 ✠┊ضع رتبه ← { اسم الرتبه }
 ✠┊مسح رتبه ← { بالرد ، بالمعرف}
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊وضع ، ضع ← الاوامر التاليه
 ✠┊اسم + اسم الكروب
 ✠┊رابط ، صوره
 ✠┊قوانين ، وصف ،الترحيب 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊تفعيل ، تعطيل ← الاوامر التاليه :
 ✠┊الايدي ، الايدي بالصوره 
 ✠┊ايدي العضو ، البايو
@@ -20286,12 +20232,12 @@ local TextHelp = [[*
 ✠┊تنبيه الاسماء ، الصوتيات 
 ✠┊الصوتيات العامه
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊مسح ← + { الامر } 
 ✠┊المحظورين ، المطرودين
 ✠┊المكتومين ← المقيدين
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊ترتيب الاوامر ← استعاده الاوامر
 ✠┊اضف ، مسح ← { رد }
 ✠┊الردود ، مسح الردود
@@ -20328,7 +20274,7 @@ data = {
 local TextHelp = [[*
 ✠┊اوامر المنشئ الاساسي
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊رفع ، تنزيل ←{ منشئ }
 ✠┊المنشئين ، مسح المنشئين
 ✠┊رفع ، تنزيل ←{ مشرف }
@@ -20337,10 +20283,10 @@ local TextHelp = [[*
 ✠┊مسح نقاطه ، رسائله ← {بالرد} 
 ✠┊تفعيل ، تعطيل ← منع التصفيه
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊اوامر المنشئ الكروب
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊رفع ، تنزيل ← { مدير }
 ✠┊المدراء ، مسح المدراء
 ✠┊تغيير ، مسح ←{ الايدي }
@@ -20350,7 +20296,7 @@ local TextHelp = [[*
 ✠┊ضع التكرار ← { عدد }
 ✠┊تفعيل الاوامر ← { اوامر اساسيه }
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊تفعيل ، تعطيل ← الاوامر التاليه :
 ✠┊الردود العامه ، الطرد ، الحظر
 ✠┊الرفع ، التاك ، نزلني ، ضع رتبه 
@@ -20378,15 +20324,15 @@ data = {
 local TextHelp = [[*
 ✠┊اوامر مالك الكروب 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊رفع ، تنزيل ←{ مالك }
 ✠┊المالكين ، مسح المالكين
  ✠┊تنزيل جميع الرتب
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊اوامر المالكين 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊رفع ، تنزيل ← { منشئ اساسي }
 ✠┊المنشئين الاساسيين،
 ✠┊مسح المنشئين الاساسيين
@@ -20412,10 +20358,10 @@ data = {
 local TextHelp = [[*
 ✠┊اوامر التسلية
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊رفع ، تنزيل ← الاوامر التاليه ↓
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊غبي 
 ✠┊مطي
 ✠┊اثول
@@ -20427,20 +20373,20 @@ local TextHelp = [[*
 ✠┊لوكي
 ✠┊زاحف
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊اوامر التاك 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊قائمه التاج ~ المـلــوك
 ✠┊المـلـكات ~ الطامسين
 ✠┊الثولان ~  الجــلاب
 ✠┊المطايــه ~  الصخول
 ✠┊اللوكيــه ~  الاغبيـاء
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊اوامر الترفيه 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊زخرفه + النص
 ✠┊مثال زخرفه ليدر
 ✠┊احسب + عمرك
@@ -20448,15 +20394,15 @@ local TextHelp = [[*
 ✠┊معني + الاسم 
 ✠┊مثال معني ليدر
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊نسبه الحب/ الكره
 ✠┊نسبه الرجوله/ الانوثه 
 ✠┊نسبه الذكـــــاء/ الغباء 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊الاوامــر بالـــرد  ⇣ 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊زواج ~ طلاك
 *]]
 return send(msg_chat_id,msg_id,TextHelp,"md",false, false, false, false, reply_markup)
@@ -20481,7 +20427,7 @@ data = {
 local TextHelp = [[*
 ✠┊قائمــه العــاب البــوت
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊لعبة المختلف » المختلف
 ✠┊لعبة الامثله » امثله
 ✠┊لعبة العكس » العكس
@@ -20500,7 +20446,7 @@ local TextHelp = [[*
 ✠┊انكليزي » معاني الكلمات 
 ✠┊كت تويت ،كت » اسئله ترفيهيه
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊نقاطي ← لعرض عدد النقاط 
 ✠┊بيع نقاطي + { العدد } 
 لبيع كل نقطه مقابل {50} رساله
@@ -24091,7 +24037,7 @@ local reply_markup = bot.replyMarkup{type = 'inline',data = {
   }
   }
 return bot.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id, getbio( 1696907808 ).."\n
-┉┉┉┉┉┉┉┉┉┉\n"  , "html", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
+⋆\n"  , "html", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
 end
 end
 if text == 'المبرمج' or text == 'مبرمج السورس' or text == 'محدث السورس' then
@@ -24105,7 +24051,7 @@ local reply_markup = bot.replyMarkup{type = 'inline',data = {
   }
   }
 return bot.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id, getbio(1696907808).."\n
-┉┉┉┉┉┉┉┉┉┉\n"  , "html", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
+⋆\n"  , "html", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
 end
 end
 
@@ -24340,7 +24286,7 @@ data = {
 }
 }
 return send(msg_chat_id,msg_id,' ✠┊ اهلا عزيزي آلمـطـور\n ✠┊ آنت آلمـطـور آلآسـآسـي للبوت\n
-┉┉┉┉┉┉┉┉┉┉\n ✠┊ تسـتطـيع‌‏ آلتحگم باوامر البوت\n ✠┊ من خلاال الكيبورت خاص بك\n ✠┊ قناة سورس البوت [اضغط هنا](https://t.me/LEDARQ)', 'md', false, false, false, false, reply_markup)
+⋆\n ✠┊ تسـتطـيع‌‏ آلتحگم باوامر البوت\n ✠┊ من خلاال الكيبورت خاص بك\n ✠┊ قناة سورس البوت [اضغط هنا](https://t.me/LEDARQ)', 'md', false, false, false, false, reply_markup)
 end
 end
 if Redis:get(semo.."set:rmz"..msg.sender_id.user_id) then
@@ -24528,7 +24474,7 @@ local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = Redis:get(
 return send(msg.chat_id,msg.id,'*\n✠┊ عليك الاشتراك في قناة البوت لأستخدام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 send(msg_chat_id,msg_id,'*✠┊عدد احصائيات البوت الكامله \n
-┉┉┉┉┉┉┉┉┉┉\n✠┊ عدد المجموعات : '..(Redis:scard(semo..'ChekBotAdd') or 0)..'\n✠┊ عدد المشتركين : '..(Redis:scard(semo..'Num:User:Pv') or 0)..'*',"md",true)  
+⋆\n✠┊ عدد المجموعات : '..(Redis:scard(semo..'ChekBotAdd') or 0)..'\n✠┊ عدد المشتركين : '..(Redis:scard(semo..'Num:User:Pv') or 0)..'*',"md",true)  
 end
 if text == 'تغيير كليشه المطور ✠' then
 if not msg.Asasy then 
@@ -24608,7 +24554,7 @@ send(msg_chat_id,msg_id,[[
 ❨ ملف ✠┊ملصق ✠┊متحركه ✠┊صوره
  ✠┊فيديو ✠┊بصمه الفيديو ✠┊بصمه ✠┊صوت ✠┊رساله ❩
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ↯︙للخروج ارسل ( الغاء )
  ✓
 ]],"md",true)  
@@ -24633,7 +24579,7 @@ send(msg_chat_id,msg_id,[[
 ❨ ملف ✠┊ملصق ✠┊متحركه ✠┊صوره
  ✠┊فيديو ✠┊بصمه الفيديو ✠┊بصمه ✠┊صوت ✠┊رساله ❩
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ↯︙للخروج ارسل ( الغاء )
  ✓
 ]],"md",true)  
@@ -24658,7 +24604,7 @@ send(msg_chat_id,msg_id,[[
 ❨ ملف ✠┊ملصق ✠┊متحركه ✠┊صوره
  ✠┊فيديو ✠┊بصمه الفيديو ✠┊بصمه ✠┊صوت ✠┊رساله ❩
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ↯︙للخروج ارسل ( الغاء )
  ✓
 ]],"md",true)  
@@ -24699,8 +24645,8 @@ if text == "حسو" then
     }
     }
   return bot.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id,"\n ـ
-┉┉┉┉┉┉┉┉┉┉ـ\n"..ANUBIS[math.random(#ANUBIS)].."\n ـ
-┉┉┉┉┉┉┉┉┉┉ـ"  , "md", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
+⋆ـ\n"..ANUBIS[math.random(#ANUBIS)].."\n ـ
+⋆ـ"  , "md", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
   end
   end
 
@@ -24735,7 +24681,7 @@ return send(msg.chat_id,msg.id,'*\n✠┊ عليك الاشتراك في قنا�
 end
 local list = Redis:smembers(semo.."List:Rd:Sudo")
 text = "\n📝︙قائمة الردود العامه \n
-┉┉┉┉┉┉┉┉┉┉\n"
+⋆\n"
 for k,v in pairs(list) do
 if Redis:get(semo.."Add:Rd:Sudo:Gif"..v) then
 db = "متحركه 🎭"
@@ -24924,7 +24870,7 @@ if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد محظورين عام حاليا , ","md",true)  
 end
 ListMembers = '\n*✠┊قائمه المحظورين عام  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 var(v)
@@ -24956,7 +24902,7 @@ if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد مطورين حاليا , ","md",true)  
 end
 ListMembers = '\n*✠┊قائمه مطورين البوت \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -24987,7 +24933,7 @@ if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد مطورين حاليا , ","md",true)  
 end
 ListMembers = '\n*✠┊قائمه مطورين البوت \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -25243,7 +25189,7 @@ if Message_Edit.content.Merotele == "messageContact" or Message_Edit.content.Mer
 if Redis:get(semo.."Lock:edit"..data.chat_id) then
 if #monsha ~= 0 then 
 local ListMembers = '\n*✠┊تاك للمالكين  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+⋆*\n'
 for k, v in pairs(monsha) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -25812,7 +25758,7 @@ if Text and Text:match('(.*)/next/(.*)') then
   local Residual = #kit_list - num
   if tonumber(IdUser) == tonumber(UserId) and Residual > 30 then
       local Listkit = '\n✠┊قائمه الاسأله  \n✠┊عدد الاسأله : '..#kit_list..'\n 
-┉┉┉┉┉┉┉┉┉┉\n'
+⋆\n'
   for i = num, anubis, 1 do
       Listkit = Listkit.." - "..kit_list[i].."\n"
   end
@@ -25828,7 +25774,7 @@ if Text and Text:match('(.*)/next/(.*)') then
   if tonumber(IdUser) == tonumber(UserId) and Residual < 30 then
       local kit_end = num + Residual
       local Listkit = '\n✠┊قائمه الاسأله  \n✠┊عدد الاسأله : '..#kit_list..'\n 
-┉┉┉┉┉┉┉┉┉┉\n'
+⋆\n'
   for i = num, kit_end, 1 do
       Listkit = Listkit.." - "..kit_list[i].."\n"
   end
@@ -26271,12 +26217,12 @@ data = {
 local TextHelp = [[*
 ✠┊اوامر الحمايه كالاتي ...
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊قفل ، فتح ← الامر 
 ✠┊تستطيع قفل حمايه كما يلي ...
 ✠┊← { بالتقييد ، بالطرد ، بالكتم }
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊الكل ~ الدخول
 ✠┊الروابط ~ المعرف
 ✠┊التاك ~ الشارحه
@@ -26284,13 +26230,13 @@ local TextHelp = [[*
 ✠┊المتحركه ~ الملفات
 ✠┊الصور ~ الفيديو 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊الماركداون ~ البوتات
 ✠┊التكرار ~ الكلايش
 ✠┊السيلفي ~ الملصقات
 ✠┊الانلاين ~  الدردشه
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊التوجيه ~ الاغاني
 ✠┊الصوت ~ الجهات
 ✠┊الاشعارات ~ التثبيت 
@@ -26300,7 +26246,7 @@ local TextHelp = [[*
 ✠┊الإنكليزيه
 ✠┊الكفر ~ الاباحي
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 *]]
 edit(ChatId,Msg_id,TextHelp, 'md', true, false, reply_markup)
 end
@@ -26336,53 +26282,53 @@ data = {
 local TextHelp = [[*
 ✠┊اوامر ادمنية الكروب ...
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊رفع، تنزيل ← مميز
 ✠┊المميزين ← مسح المميزين 
 ✠┊رفع الادمنيه
 ✠┊تاك ، تاك للكل ، الكروب
 ✠┊منع ، الغاء منع
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊الاوامر التالية ← {بالرد ، بالمعرف}
 ✠┊حظر ، طرد ← الغاء حظر 
 ✠┊كتم ← الغاء كتم
 ✠┊تقييد ← الغاء تقييد
 ✠┊كشف ، رفع ← القيود
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊عرض القوائم كما يلي ...
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊المنشئين الاساسيين ، المنشئين 
 ✠┊المدراء ، الادمنيه ، المميزين
 ✠┊المشرفين ، المكتومين
 ✠┊قائمه المنع
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊تثبيت ، الغاء تثبيت
 ✠┊الرابط ، الاعدادات ، الحمايه
 ✠┊الترحيب ، القوانين
 ✠┊ضع رتبه  ← { اسم الرتبه } 
 ✠┊تحكم ← {بالرد ، بالمعرف}
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊تفعيل ، تعطيل ← الاوامر التاليه :
 ✠┊الترحيب ، الرابط
 ✠┊ردود البوت ، الالعاب
 ✠┊اطردني ، التسليه
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊مسح ← الاوامر التاليه
 ✠┊القوائم ، قائمه المنع ، المميزين
 ✠┊الرابط ، القوانين ، الصوره
 ✠┊مسح ← { عدد }
 ✠┊مسح ← { بالرد }
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊اوامر الاعضاء والادمنيه 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊ايدي ، ايدي بالرد ، رسائلي
 ✠┊تفاعلي ، لقبي ، بايو ، ترند
 ✠┊جهاتي ، تعديلاتي ، نقاطي
@@ -26434,7 +26380,7 @@ data = {
 local TextHelp = [[*
 ✠┊اوامر المدراء في الكروب
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊رفع ، تنزيل ← ادمن
 ✠┊الادمنيه ← مسح الادمنيه 
 ✠┊تنزيل الكل ← {بالرد ، بالمعرف}
@@ -26444,28 +26390,28 @@ local TextHelp = [[*
 ✠┊طرد ← المحذوفين 
 ✠┊قفل فتح ← ارسال القناة
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊لتغيير رد الرتب في البوت
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊تغيير رد ← {اسم الرتبه والنص} 
 ✠┊المطور ، المالك ، المنشئ الاساسي
 ✠┊المنشئ ، المدير ، الادمن
 ✠┊المميز ، العضو
 ✠┊مسح رد ← { اسم الرتبه }
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊وضع الرتب ← { بالرد , بالمعرف}
 ✠┊ضع رتبه ← { اسم الرتبه }
 ✠┊مسح رتبه ← { بالرد ، بالمعرف}
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊وضع ، ضع ← الاوامر التاليه
 ✠┊اسم + اسم الكروب
 ✠┊رابط ، صوره
 ✠┊قوانين ، وصف ،الترحيب 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊تفعيل ، تعطيل ← الاوامر التاليه :
 ✠┊الايدي ، الايدي بالصوره 
 ✠┊ايدي العضو ، البايو
@@ -26475,12 +26421,12 @@ local TextHelp = [[*
 ✠┊تنبيه الاسماء ، الصوتيات 
 ✠┊الصوتيات العامه
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊مسح ← + { الامر } 
 ✠┊المحظورين ، المطرودين
 ✠┊المكتومين ← المقيدين
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊ترتيب الاوامر ← استعاده الاوامر
 ✠┊اضف ، مسح ← { رد }
 ✠┊الردود ، مسح الردود
@@ -26527,7 +26473,7 @@ data = {
 local TextHelp = [[*
 ✠┊اوامر المنشئ الاساسي
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊رفع ، تنزيل ←{ منشئ }
 ✠┊المنشئين ، مسح المنشئين
 ✠┊رفع ، تنزيل ←{ مشرف }
@@ -26536,10 +26482,10 @@ local TextHelp = [[*
 ✠┊مسح نقاطه ، رسائله ← {بالرد}
 ✠┊تفعيل ، تعطيل ← منع التصفيه
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊اوامر المنشئ الكروب
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊رفع ، تنزيل ← { مدير }
 ✠┊المدراء ، مسح المدراء
 ✠┊تغيير ، مسح ←{ الايدي }
@@ -26549,7 +26495,7 @@ local TextHelp = [[*
 ✠┊ضع التكرار ← { عدد }
 ✠┊تفعيل الاوامر ← { اوامر اساسيه }
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊تفعيل ، تعطيل ← الاوامر التاليه :
 ✠┊الردود العامه ، الطرد ، الحظر
 ✠┊الرفع ، التاك ، نزلني ، ضع رتبه 
@@ -26590,15 +26536,15 @@ data = {
 local TextHelp = [[*
 ︙اوامر مالك الكروب 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊رفع ، تنزيل ←{ مالك }
 ✠┊المالكين ، مسح المالكين
  ✠┊تنزيل جميع الرتب 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊اوامر المالكين 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊رفع ، تنزيل ← { منشئ اساسي }
 ✠┊المنشئين الاساسيين،
 ✠┊مسح المنشئين الاساسيين 
@@ -26637,7 +26583,7 @@ data = {
 local TextHelp = [[*
 ✠┊قائمــه العــاب البــوت
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊لعبة البنك » بنك
 ✠┊لعبة المختلف » المختلف
 ✠┊لعبة الامثله » امثله
@@ -26657,7 +26603,7 @@ local TextHelp = [[*
 ✠┊انكليزي » معاني الكلمات 
 ✠┊كت تويت،كت  »  اسئله ترفيهيه
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊نقاطي ← لعرض عدد النقاط 
 ✠┊بيع نقاطي + { العدد } 
 لبيع كل نقطه مقابل {50} رساله
@@ -26696,10 +26642,10 @@ data = {
 local TextHelp = [[*
 ✠┊اوامر التسلية
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊رفع ، تنزيل ← الاوامر التاليه ↓
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊غبي 
 ✠┊مطي
 ✠┊اثول
@@ -26711,20 +26657,20 @@ local TextHelp = [[*
 ✠┊لوكي
 ✠┊زاحف
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊اوامر التاك 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊قائمه التاج ~ المـلــوك
 ✠┊المـلـكات ~ الطامسين
 ✠┊الثولان ~  الجــلاب
 ✠┊المطايــه ~  الصخول
 ✠┊اللوكيــه ~  الاغبيـاء
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊اوامر الترفيه 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊زخرفه + النص
 ✠┊مثال زخرفه ليدر
 ✠┊احسب + عمرك
@@ -26732,15 +26678,15 @@ local TextHelp = [[*
 ✠┊معني + الاسم 
 ✠┊مثال معني ليدر
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊نسبه الحب/ الكره
 ✠┊نسبه الرجوله/ الانوثه 
 ✠┊نسبه الذكـــــاء/ الغباء 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊الاوامــر بالـــرد  ⇣ 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊زواج ~ طلاك
 
 *]]
@@ -26778,7 +26724,7 @@ data = {
 local TextHelp = [[*
 ✠┊اوامــر البــوت الرئيسيـة 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊{ م1 } ← اوامر الحمايه
 ✠┊{ م2 } ← اوامر الادمنيه
 ✠┊{ م3 } ← اوامر المدراء
@@ -26821,7 +26767,7 @@ data = {
 local TextHelp = [[*
 ✠┊اوامر المطور الاساسي  
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊تفعيل  ←  تعطيل
 ✠┊رفع  تنزيل ← مطور اساسي
 ✠┊المطورين الاساسيين
@@ -26833,7 +26779,7 @@ local TextHelp = [[*
 ✠┊المطورين ← مسح المطورين
 ✠┊تغيير المطور الاساسي
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊تفعيل الوضع المدفوع + الايدي 
 ✠┊الغاء الوضع المدفوع + الايدي
 ✠┊حظر كروب + { الايدي }
@@ -26846,14 +26792,14 @@ local TextHelp = [[*
 ✠┊الاشتراك الاجباري للكروب
 ✠┊تعيين عدد الاعضاء + {العدد}
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊حظر عام ، الغاء العام
 ✠┊قائمه العام ، مسح قائمه العام
 ✠┊كتم عام ، الغاء كتم عام
 ✠┊المكتومين عام
 ✠┊مسح المكتومين عام
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊تغيير ، مسح ←{ اسم البوت }
 ✠┊ضع صوره للترحيب 
 ✠┊الاحصائيات
@@ -26862,7 +26808,7 @@ local TextHelp = [[*
 ✠┊اذاعه بالتوجيه ، اذاعه بالتثبيت
 ✠┊اذاعه خاص بالتوجيه
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊تفعيل تعطيل جلب النسخه التلقائيه
 ✠┊جلب نسخه احتياطيه
 ✠┊رفع النسخه الاحتياطيه بالرد
@@ -26871,7 +26817,7 @@ local TextHelp = [[*
 ✠┊رفع نسخه الردود بالرد
 ✠┊معلومات التنصيب
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊تعيين ، مسح ← { الايدي عام }
 ✠┊اضف ، مسح ← {رد عام}
 ✠┊اضف ، مسح ← {رد عام متعدد}
@@ -26885,7 +26831,7 @@ local TextHelp = [[*
 ✠┊قائمه المنع عام
 ✠┊مسح قائمه المنع عام
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊اضف مسح ← سؤال
 ✠┊الاسئله المضافه
 ✠┊مسح الاسئله المضافه
@@ -26900,21 +26846,21 @@ local TextHelp = [[*
 ✠┊قائمة الموسيقى 
 ✠┊مسح قائمه الموسيقى
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊تفعيل ، تعطيل ← الاوامر التاليه↓
 ✠┊البوت الخدمي ، المغادرة ، الاذاعه
 ✠┊التواصل ، الاحصائيات
 ✠┊ملف ← { اسم الملف }
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊مسح جميع الملفات 
 ✠┊المتجر ، الملفات
 ✠┊تحديث ، تحديث السورس 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊اوامر المطور في البوت
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊رفع، تنزيل ← { مالك }
 ✠┊المالكين ، مسح المالكين
 ✠┊تنزيل جميع الرتب
@@ -26953,7 +26899,7 @@ data = {
 local TextHelp = [[*
 ︙اوامر التسليه كالاتي: 
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 ✠┊الامر ، تفعيل ، تعطيل ← { الامر }
 ✠┊غنيلي ، ريمكس ، اغنيه ، شعر
 ✠┊صوره ،  متحركه
@@ -26962,7 +26908,7 @@ local TextHelp = [[*
 ✠┊حساب العمر( احسب + تاريخ الميلاد)
 ✠┊معنى اسم + الاسم
 
-┉┉┉┉┉┉┉┉┉┉
+⋆
 *]]
 edit(ChatId,Msg_id,TextHelp, 'md', true, false, reply_markup)
 end
