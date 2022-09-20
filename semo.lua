@@ -4444,8 +4444,7 @@ if ChannelJoin(msg) == false then
 local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = Redis:get(semo..'Channel:Join:Name'), url = 't.me/'..Redis:get(semo..'Channel:Join')}, },}}
 return send(msg.chat_id,msg.id,'*\n✠┊ عليك الاشتراك في قناة البوت لأستخدام الاوامر*',"md",false, false, false, false, reply_markup)
 end
-send(msg_chat_id,msg_id,'*✠┊عدد احصائيات البوت الكامله \n
-⋆\n✠┊ عدد المجموعات : '..(Redis:scard(semo..'ChekBotAdd') or 0)..'\n✠┊ عدد المشتركين : '..(Redis:scard(semo..'Num:User:Pv') or 0)..'*',"md",true)  
+send(msg_chat_id,msg_id,'*✠┊عدد احصائيات البوت الكامله \n⋆\n✠┊ عدد المجموعات : '..(Redis:scard(semo..'ChekBotAdd') or 0)..'\n✠┊ عدد المشتركين : '..(Redis:scard(semo..'Num:User:Pv') or 0)..'*',"md",true)  
 end
 if text == 'تفعيل' and msg.Dev then
 if msg.can_be_deleted_for_all_users == false then
@@ -7204,8 +7203,7 @@ end
 if GetMemberStatus.can_promote_members then
 promote = '❬ ✔️ ❭' else promote = '❬ ❌ ❭'
 end
-local PermissionsUserr = '*\n✠┊ صلاحيات المستخدم :\n
-⋆'..'\n✠┊ تغيير المعلومات : '..change_info..'\n✠┊ تثبيت الرسائل : '..pin_messages..'\n✠┊ اضافه مستخدمين : '..invite_users..'\n✠┊ مسح الرسائل : '..delete_messages..'\n✠┊ حظر المستخدمين : '..restrict_members..'\n✠┊ اضافه المشرفين : '..promote..'\n\n*'
+local PermissionsUserr = '*\n✠┊ صلاحيات المستخدم :\n⋆'..'\n✠┊ تغيير المعلومات : '..change_info..'\n✠┊ تثبيت الرسائل : '..pin_messages..'\n✠┊ اضافه مستخدمين : '..invite_users..'\n✠┊ مسح الرسائل : '..delete_messages..'\n✠┊ حظر المستخدمين : '..restrict_members..'\n✠┊ اضافه المشرفين : '..promote..'\n\n*'
 return send(msg_chat_id,msg_id,"✠┊الصلاحيات : مشرف الكروب"..(PermissionsUserr or '') ,"md",true) 
 end
 end
@@ -18641,8 +18639,7 @@ local heart_list = Redis:smembers(semo..msg_chat_id..msg.sender_id.user_id.."my_
 if #heart_list == 0 then
 return send(msg_chat_id,msg_id,"قلبك فاضي محدش فيه","md")
 elseif #heart_list > 0 then
-your_heart = "الناس الي فقلبك \n
-⋆\n"
+your_heart = "الناس الي فقلبك \n⋆\n"
 for k,v in pairs(heart_list) do
 local user_info = bot.getUser(v)
 local name = user_info.first_name
@@ -19175,8 +19172,7 @@ local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = Redis:get(
 return send(msg.chat_id,msg.id,'*\n✠┊ عليك الاشتراك في قناة البوت لأستخدام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local list = Redis:smembers(semo.."List:Manager:inline"..msg_chat_id.."")
-text = "✠┊قائمه الردود الانلاين \n
-⋆\n"
+text = "✠┊قائمه الردود الانلاين \n⋆\n"
 for k,v in pairs(list) do
 if Redis:get(semo.."Add:Rd:Manager:Gif:inline"..v..msg_chat_id) then
 db = "متحركه"
@@ -19473,8 +19469,7 @@ local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = Redis:get(
 return send(msg.chat_id,msg.id,'*\n✠┊ عليك الاشتراك في قناة البوت لأستخدام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local list = Redis:smembers(semo.."List:Manager:inline3am")
-text = "✠┊قائمه الردود الانلاين \n
-⋆\n"
+text = "✠┊قائمه الردود الانلاين \n⋆\n"
 for k,v in pairs(list) do
 if Redis:get(semo.."Add:Rd:Manager:Gif:inline3am"..v) then
 db = "متحركه"
@@ -19744,8 +19739,7 @@ local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = Redis:get(
 return send(msg.chat_id,msg.id,'*\n✠┊ عليك الاشتراك في قناة البوت لأستخدام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local mz_sudo = Redis:smembers(semo.."List:Rd:Sudo:mz")
-mmez_list = "\n✠┊ قائمة الردود المميزه \n
-⋆\n"
+mmez_list = "\n✠┊ قائمة الردود المميزه \n⋆\n"
 for k,v in pairs(mz_sudo) do
 if Redis:get(semo.."Add:Rd:Sudo:mz:Gif"..v) then
 db = "متحركه"
@@ -24036,8 +24030,7 @@ local reply_markup = bot.replyMarkup{type = 'inline',data = {
     },
   }
   }
-return bot.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id, getbio( 1696907808 ).."\n
-⋆\n"  , "html", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
+return bot.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id, getbio( 1696907808 ).."\n⋆\n"  , "html", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
 end
 end
 if text == 'المبرمج' or text == 'مبرمج السورس' or text == 'محدث السورس' then
@@ -24050,8 +24043,7 @@ local reply_markup = bot.replyMarkup{type = 'inline',data = {
     },
   }
   }
-return bot.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id, getbio(1696907808).."\n
-⋆\n"  , "html", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
+return bot.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id, getbio(1696907808).."\n⋆\n"  , "html", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
 end
 end
 
@@ -24285,8 +24277,7 @@ data = {
 },
 }
 }
-return send(msg_chat_id,msg_id,' ✠┊ اهلا عزيزي آلمـطـور\n ✠┊ آنت آلمـطـور آلآسـآسـي للبوت\n
-⋆\n ✠┊ تسـتطـيع‌‏ آلتحگم باوامر البوت\n ✠┊ من خلاال الكيبورت خاص بك\n ✠┊ قناة سورس البوت [اضغط هنا](https://t.me/LEDARQ)', 'md', false, false, false, false, reply_markup)
+return send(msg_chat_id,msg_id,' ✠┊ اهلا عزيزي آلمـطـور\n ✠┊ آنت آلمـطـور آلآسـآسـي للبوت\n⋆\n ✠┊ تسـتطـيع‌‏ آلتحگم باوامر البوت\n ✠┊ من خلاال الكيبورت خاص بك\n ✠┊ قناة سورس البوت [اضغط هنا](https://t.me/LEDARQ)', 'md', false, false, false, false, reply_markup)
 end
 end
 if Redis:get(semo.."set:rmz"..msg.sender_id.user_id) then
@@ -24473,8 +24464,7 @@ if ChannelJoin(msg) == false then
 local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = Redis:get(semo..'Channel:Join:Name'), url = 't.me/'..Redis:get(semo..'Channel:Join')}, },}}
 return send(msg.chat_id,msg.id,'*\n✠┊ عليك الاشتراك في قناة البوت لأستخدام الاوامر*',"md",false, false, false, false, reply_markup)
 end
-send(msg_chat_id,msg_id,'*✠┊عدد احصائيات البوت الكامله \n
-⋆\n✠┊ عدد المجموعات : '..(Redis:scard(semo..'ChekBotAdd') or 0)..'\n✠┊ عدد المشتركين : '..(Redis:scard(semo..'Num:User:Pv') or 0)..'*',"md",true)  
+send(msg_chat_id,msg_id,'*✠┊عدد احصائيات البوت الكامله \n⋆\n✠┊ عدد المجموعات : '..(Redis:scard(semo..'ChekBotAdd') or 0)..'\n✠┊ عدد المشتركين : '..(Redis:scard(semo..'Num:User:Pv') or 0)..'*',"md",true)  
 end
 if text == 'تغيير كليشه المطور ✠' then
 if not msg.Asasy then 
@@ -24680,8 +24670,7 @@ local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = Redis:get(
 return send(msg.chat_id,msg.id,'*\n✠┊ عليك الاشتراك في قناة البوت لأستخدام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local list = Redis:smembers(semo.."List:Rd:Sudo")
-text = "\n📝︙قائمة الردود العامه \n
-⋆\n"
+text = "\n📝︙قائمة الردود العامه \n⋆\n"
 for k,v in pairs(list) do
 if Redis:get(semo.."Add:Rd:Sudo:Gif"..v) then
 db = "متحركه 🎭"
@@ -24869,8 +24858,7 @@ local Info_Members = Redis:smembers(semo.."BanAll:Groups")
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد محظورين عام حاليا , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه المحظورين عام  \n 
-⋆*\n'
+ListMembers = '\n*✠┊قائمه المحظورين عام  \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 var(v)
@@ -24901,8 +24889,7 @@ local Info_Members = Redis:smembers(semo.."Dev:Groups")
 if #Info_Members == 0 then
 return send(msg_chat_id,msg_id,"✠┊لا يوجد مطورين حاليا , ","md",true)  
 end
-ListMembers = '\n*✠┊قائمه مطورين البوت \n 
-⋆*\n'
+ListMembers = '\n*✠┊قائمه مطورين البوت \n ⋆*\n'
 for k, v in pairs(Info_Members) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -25199,8 +25186,7 @@ ListMembers = ListMembers.."*"..k.." -* ["..v.."](tg://user?id="..v..")\n"
 end
 end
  
-local tecxt = ListMembers.."\n\n".."\n✠┊ المستخدم  {["..names.." ](tg://user?id="..Message_Edit.sender_id.user_id..")}"..
-"\n✠┊ قام بتعديل الميديا"
+local tecxt = ListMembers.."\n\n".."\n✠┊ المستخدم  {["..names.." ](tg://user?id="..Message_Edit.sender_id.user_id..")}".."\n✠┊ قام بتعديل الميديا"
 send(data.chat_id,0,tecxt,"md")
 end
 bot.deleteMessages(data.chat_id,{[1]= data.message_id})
@@ -25757,8 +25743,7 @@ if Text and Text:match('(.*)/next/(.*)') then
   local kit_list = Redis:smembers(semo.."kit:")
   local Residual = #kit_list - num
   if tonumber(IdUser) == tonumber(UserId) and Residual > 30 then
-      local Listkit = '\n✠┊قائمه الاسأله  \n✠┊عدد الاسأله : '..#kit_list..'\n 
-⋆\n'
+      local Listkit = '\n✠┊قائمه الاسأله  \n✠┊عدد الاسأله : '..#kit_list..'\n ⋆\n'
   for i = num, anubis, 1 do
       Listkit = Listkit.." - "..kit_list[i].."\n"
   end
@@ -25773,8 +25758,7 @@ if Text and Text:match('(.*)/next/(.*)') then
   end
   if tonumber(IdUser) == tonumber(UserId) and Residual < 30 then
       local kit_end = num + Residual
-      local Listkit = '\n✠┊قائمه الاسأله  \n✠┊عدد الاسأله : '..#kit_list..'\n 
-⋆\n'
+      local Listkit = '\n✠┊قائمه الاسأله  \n✠┊عدد الاسأله : '..#kit_list..'\n ⋆\n'
   for i = num, kit_end, 1 do
       Listkit = Listkit.." - "..kit_list[i].."\n"
   end
