@@ -1608,8 +1608,7 @@ Redis:srem(semo.."Admin:Group"..msg.chat_id,msg.sender_id.user_id)
 Redis:srem(semo.."Special:Group"..msg.chat_id,msg.sender_id.user_id)
 if Json_Info.ok == false and Json_Info.error_code == 400 and Json_Info.description == "Bad Request: CHAT_ADMIN_REQUIRED" then
 if #monsha ~= 0 then 
-local ListMembers = '\n*✠┊تاك للمالكين  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+local ListMembers = '\n*✠┊تاك للمالكين  \n ┉┉┉┉┉┉┉┉┉┉*\n'
 for k, v in pairs(monsha) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -1627,8 +1626,7 @@ end
 end
 if Json_Info.ok == false and Json_Info.error_code == 400 and Json_Info.description == "Bad Request: can't remove chat owner" then
 if #monsha ~= 0 then 
-local ListMembers = '\n*✠┊تاك للمالكين  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+local ListMembers = '\n*✠┊تاك للمالكين  \n ┉┉┉┉┉┉┉┉┉┉*\n'
 for k, v in pairs(monsha) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -1645,8 +1643,7 @@ end
 end
 if Json_Info.ok == true and Json_Info.result == true then
 if #monsha ~= 0 then 
-local ListMembers = '\n*✠┊تاك للمالكين  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+local ListMembers = '\n*✠┊تاك للمالكين  \n ┉┉┉┉┉┉┉┉┉┉*\n'
 for k, v in pairs(monsha) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -1691,8 +1688,7 @@ Redis:srem(semo.."Admin:Group"..msg.chat_id,msg.sender_id.user_id)
 Redis:srem(semo.."Special:Group"..msg.chat_id,msg.sender_id.user_id)
 if Json_Info.ok == false and Json_Info.error_code == 400 and Json_Info.description == "Bad Request: CHAT_ADMIN_REQUIRED" then
 if #monsha ~= 0 then 
-local ListMembers = '\n*✠┊تاك للمالكين  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+local ListMembers = '\n*✠┊تاك للمالكين  \n ┉┉┉┉┉┉┉┉┉┉*\n'
 for k, v in pairs(monsha) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -1708,8 +1704,7 @@ end
 end
 if Json_Info.ok == false and Json_Info.error_code == 400 and Json_Info.description == "Bad Request: can't remove chat owner" then
 if #monsha ~= 0 then 
-local ListMembers = '\n*✠┊تاك للمالكين  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+local ListMembers = '\n*✠┊تاك للمالكين  \n ┉┉┉┉┉┉┉┉┉┉*\n'
 for k, v in pairs(monsha) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
@@ -1725,8 +1720,7 @@ end
 end
 if Json_Info.ok == true and Json_Info.result == true then
 if #monsha ~= 0 then 
-local ListMembers = '\n*✠┊تاك للمالكين  \n 
-┉┉┉┉┉┉┉┉┉┉*\n'
+local ListMembers = '\n*✠┊تاك للمالكين  \n ┉┉┉┉┉┉┉┉┉┉*\n'
 for k, v in pairs(monsha) do
 local UserInfo = bot.getUser(v)
 if UserInfo and UserInfo.username and UserInfo.username ~= "" then
