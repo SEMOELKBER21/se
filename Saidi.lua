@@ -9466,7 +9466,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '❲ ⁨⁩𝐒𝐎𝐔𝐑𝐂𝐄 𝐓𝐄𝐋𝐄𝐆𝐎𝐃 ❳', url = 't.me/CR_T2'}, 
+{text = '❲ ⁨⁩𝐒𝐎𝐔??𝐂𝐄 𝐓𝐄𝐋𝐄𝐆𝐎𝐃 ❳', url = 't.me/CR_T2'}, 
 },
 }
 }
@@ -11136,10 +11136,7 @@ https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. ms
 end
 if text == 'صلاح' or text == 'سحس' or text == 'مطور السورس' then
 photo = "https://t.me/BK_ZT"
-local Name = '*❲ Developers Bot ❳
-— — — — — — — — —
- 𖥔Dev Name : [𝐒𝐀𝐋𝐀𝐇].(t.me/BK_ZT)]
-𖥔 Dev Bio : كل اللى هتحاول علشانه هيسيبك ويمشي .*'
+local Name = '*❲ Developers Bot ❳— — — — — — — — — 𖥔Dev Name : [𝐒𝐀𝐋𝐀𝐇].(t.me/BK_ZT)]𖥔 Dev Bio : كل اللى هتحاول علشانه هيسيبك ويمشي .*'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
