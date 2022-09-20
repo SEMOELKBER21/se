@@ -7245,8 +7245,7 @@ end
 if GetMemberStatus.can_promote_members then
 promote = '❬ ✔️ ❭' else promote = '❬ ❌ ❭'
 end
-local PermissionsUserr = '*\n✠┊ صلاحيات المستخدم :\n
-⋆'..'\n✠┊ تغيير المعلومات : '..change_info..'\n✠┊ تثبيت الرسائل : '..pin_messages..'\n✠┊ اضافه مستخدمين : '..invite_users..'\n✠┊ مسح الرسائل : '..delete_messages..'\n✠┊ حظر المستخدمين : '..restrict_members..'\n✠┊ اضافه المشرفين : '..promote..'\n\n*'
+local PermissionsUserr = '*\n✠┊ صلاحيات المستخدم :\n⋆'..'\n✠┊ تغيير المعلومات : '..change_info..'\n✠┊ تثبيت الرسائل : '..pin_messages..'\n✠┊ اضافه مستخدمين : '..invite_users..'\n✠┊ مسح الرسائل : '..delete_messages..'\n✠┊ حظر المستخدمين : '..restrict_members..'\n✠┊ اضافه المشرفين : '..promote..'\n\n*'
 return send(msg_chat_id,msg_id,"✠┊الصلاحيات : مشرف الكروب"..(PermissionsUserr or '') ,"md",true) 
 end
 end
@@ -25684,7 +25683,7 @@ local reply_markup = bot.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '• 𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥  •', url = 't.me/LEDARQ'}, 
+{text = '• 𝗦??𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥  •', url = 't.me/LEDARQ'}, 
 },
 }
 }
